@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 155 40% 3%;
+    --foreground: 150 10% 93%;
+
+    --card: 155 30% 6%;
+    --card-foreground: 150 10% 93%;
+
+    --popover: 155 30% 6%;
+    --popover-foreground: 150 10% 93%;
+
+    --primary: 155 100% 45%;
+    --primary-foreground: 155 80% 3%;
+
+    --secondary: 155 20% 10%;
+    --secondary-foreground: 150 10% 93%;
+
+    --muted: 155 15% 13%;
+    --muted-foreground: 155 10% 50%;
+
+    --accent: 190 100% 50%;
+    --accent-foreground: 190 80% 3%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 155 20% 15%;
+    --input: 155 20% 15%;
+    --ring: 155 100% 45%;
+
+    --radius: 0.75rem;
+
+    --neon-glow: 0 0 20px hsl(155 100% 45% / 0.4), 0 0 40px hsl(155 100% 45% / 0.2), 0 0 80px hsl(155 100% 45% / 0.1);
+    --neon-glow-strong: 0 0 10px hsl(155 100% 45% / 0.6), 0 0 30px hsl(155 100% 45% / 0.4), 0 0 60px hsl(155 100% 45% / 0.2);
+    --cyan-glow: 0 0 20px hsl(190 100% 50% / 0.4), 0 0 40px hsl(190 100% 50% / 0.2);
+
+    --sidebar-background: 155 40% 4%;
+    --sidebar-foreground: 150 10% 93%;
+    --sidebar-primary: 155 100% 45%;
+    --sidebar-primary-foreground: 155 80% 3%;
+    --sidebar-accent: 155 20% 10%;
+    --sidebar-accent-foreground: 150 10% 93%;
+    --sidebar-border: 155 20% 15%;
+    --sidebar-ring: 155 100% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .neon-text {
+    text-shadow: 0 0 10px hsl(155 100% 45% / 0.6), 0 0 20px hsl(155 100% 45% / 0.3);
+  }
+
+  .cyan-text {
+    text-shadow: 0 0 10px hsl(190 100% 50% / 0.6), 0 0 20px hsl(190 100% 50% / 0.3);
+  }
+
+  .neon-border {
+    box-shadow: var(--neon-glow);
+    border-color: hsl(155 100% 45% / 0.5);
+  }
+
+  .neon-border-strong {
+    box-shadow: var(--neon-glow-strong);
+    border-color: hsl(155 100% 45% / 0.8);
+  }
+
+  .grid-bg {
+    background-image: 
+      linear-gradient(hsl(155 100% 45% / 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(155 100% 45% / 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .circuit-bg {
+    background-image:
+      radial-gradient(circle at 20% 50%, hsl(155 100% 45% / 0.04) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, hsl(190 100% 50% / 0.03) 0%, transparent 50%);
+  }
+
+  .scanline {
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      hsl(155 100% 45% / 0.015) 2px,
+      hsl(155 100% 45% / 0.015) 4px
+    );
+  }
+}
