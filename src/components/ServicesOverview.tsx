@@ -50,7 +50,7 @@ const pillars = [
 const ServicesOverview = () => {
   return (
     <div className="relative">
-      <section className="relative overflow-hidden py-16 md:py-20 lg:py-24">
+      <section className="relative overflow-hidden py-24 md:py-32 lg:py-40">
         <img
           src={servicesHeroBg}
           alt=""
@@ -79,7 +79,7 @@ const ServicesOverview = () => {
         return (
           <section
             key={pillar.title}
-            className="relative overflow-hidden bg-black py-16 md:py-20 lg:py-24"
+            className="relative overflow-hidden bg-black py-24 md:py-32 lg:py-40"
           >
             <video
               className="pointer-events-none absolute inset-0 h-full w-full object-cover"
